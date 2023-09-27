@@ -1,0 +1,14 @@
+version: '3'
+services:
+  jenkins:
+    container_name: jk_ct_servidor_e
+    image: jk_im_servidor_e:0.1
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "8085:8080"
+    networks:
+      - net
+networks:
+  net:
